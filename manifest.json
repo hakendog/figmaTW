@@ -1,0 +1,25 @@
+{
+  "manifest_version": 1,
+  "name": "FigmaTW",
+  "short_name": "FigmaTW",
+  "description": "中文 Figma 插件。",
+  "version": "1.0",
+  "homepage_url": "https://figma.cool",
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.figma.com/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  }
+}
